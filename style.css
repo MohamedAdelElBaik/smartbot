@@ -30,9 +30,6 @@ header {
 }
 
 @media (max-width: 1300px) {
-  body {
-    background-color: blue;
-  }
   header {
     margin: 1.5rem 0.35rem;
   }
@@ -44,15 +41,7 @@ header {
     font-size: var(--fs-400);
   }
 }
-@media (max-width: 1024px) {
-  body {
-    background-color: red;
-  }
-}
 @media (max-width: 768px) {
-  body {
-    background-color: green;
-  }
   .main-nav {
     display: none;
   }
@@ -61,16 +50,6 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-  }
-}
-@media (max-width: 640px) {
-  body {
-    background-color: yellow;
-  }
-}
-@media (max-width: 400px) {
-  body {
-    background-color: pink;
   }
 }
 
@@ -299,4 +278,30 @@ footer input {
 }
 
 /* @media (max-width: 400px) {
+} */
+
+/* @media (max-width: 1300px) {
+  body {
+    background-color: blue;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    background-color: red;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: pink;
+  }
 } */
