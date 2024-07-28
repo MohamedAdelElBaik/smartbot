@@ -5,11 +5,11 @@ body {
 header {
   margin: 2rem 0.5rem;
 }
-.header--main {
+.main-nav {
   align-items: center;
   justify-content: space-between;
 }
-.header--main input {
+.main-nav input {
   border-radius: 20px;
 }
 
@@ -27,6 +27,51 @@ header {
 .nav-menu li:hover {
   border-bottom-color: #b3aaff;
   transform: scale(1.05);
+}
+
+@media (max-width: 1300px) {
+  body {
+    background-color: blue;
+  }
+  header {
+    margin: 1.5rem 0.35rem;
+  }
+  nav {
+    display: none;
+  }
+  .nav-menu li {
+    margin-inline: 0.5rem;
+    font-size: var(--fs-400);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    background-color: red;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+  .main-nav {
+    display: none;
+  }
+  .min-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: pink;
+  }
 }
 
 main,
