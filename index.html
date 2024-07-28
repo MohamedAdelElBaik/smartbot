@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Bot</title>
+    <link rel="stylesheet" href="design-system.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair:wght@400;700&display=swap"
@@ -11,6 +12,28 @@
     />
   </head>
   <body>
-    <header>hello there</header>
+    <header>
+      <div class="header--main flex">
+        <h1 class="fs-700 font-black">SmartBot</h1>
+        <nav>
+          <ul class="nav-menu flex fs-500">
+            <li>about us</li>
+            <li>pricing</li>
+            <li>contact us</li>
+          </ul>
+        </nav>
+        <div class="flex">
+          <input type="text" placeholder="search..." />
+          <a href="quickchat.html">
+            <button class="bg-dark box-gradient-dark text-white">
+              Quick chat
+            </button>
+          </a>
+          <a href="login.html">
+            <button>login</button>
+          </a>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
