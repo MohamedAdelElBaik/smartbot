@@ -76,13 +76,15 @@ header {
 
 main,
 footer {
-  margin-inline: 10%;
+  /* margin-inline: 10%; */
+  max-width: 1400px;
+  margin: auto;
 }
 
 main {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   display: grid;
-  grid-template-rows: repeat(3, 80vh);
+  /* grid-template-rows: repeat(3, 80vh); */
   gap: 5rem;
 }
 
@@ -90,12 +92,11 @@ section {
   /* height: 90vh; */
   display: block;
   padding: 10% 5%;
-  /* border: 1px solid green; */
   align-self: center;
   justify-self: center;
   align-items: center;
   border-radius: 40px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .about {
@@ -112,8 +113,6 @@ section {
 }
 .about--image img {
   width: 100%;
-  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  clip-path: polygon(20% 0, 80% 3%, 100% 50%, 97% 99%, 23% 95%, 0% 50%); */
   border-radius: 20px;
 }
 .about--image::after {
@@ -141,7 +140,8 @@ section {
   margin-right: 0.5em;
 }
 .price-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 .price--card {
@@ -169,6 +169,58 @@ section {
 }
 .contact form button {
   width: fit-content;
+}
+
+@media (max-width: 1300px) {
+  main,
+  footer {
+    /* margin-inline: 5%; */
+  }
+}
+@media (max-width: 1024px) {
+  section {
+    /* padding: 7% 3%; */
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .price-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .price--card {
+    padding: 3rem 2rem;
+    border-radius: 40px;
+  }
+  .contact {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    margin-inline: 2rem;
+  }
+  .price--card {
+    padding: 2rem 1rem;
+    border-radius: 30px;
+  }
+  .price--btn button {
+    display: block;
+    margin: auto;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    margin-inline: 1rem;
+  }
+  .price--card {
+    padding: 1rem 0.75rem;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .price-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
