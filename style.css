@@ -29,8 +29,12 @@ header {
   transform: scale(1.05);
 }
 
-main {
+main,
+footer {
   margin-inline: 10%;
+}
+
+main {
   min-height: 80vh;
   display: grid;
   grid-template-rows: repeat(3, 80vh);
@@ -111,8 +115,8 @@ section {
 .contact form :where(input, textarea) {
   padding-inline: 0;
   padding-inline: 1rem;
-  border-radius: 5px;
   padding-block: 10px;
+  border-radius: 5px;
   outline-color: var(--clr-sec);
   color: hsl(var(--clr-dark));
   font-size: var(--fs-400);
@@ -120,4 +124,15 @@ section {
 }
 .contact form button {
   width: fit-content;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 3rem 2rem;
+  border-radius: 100px 100px 0 0;
+}
+footer input {
+  border: 1px solid hsl(var(--clr-dark));
+  border-color: hsl(var(--clr-dark));
+  border-radius: 20px;
 }
