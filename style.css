@@ -32,9 +32,9 @@ header {
 main {
   margin-inline: 10%;
   min-height: 80vh;
-  border: 1px solid red;
   display: grid;
   grid-template-rows: repeat(3, 80vh);
+  gap: 5rem;
 }
 
 section {
@@ -51,7 +51,7 @@ section {
 
 .about {
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 3rem;
 }
 .about--content {
   display: flex;
@@ -98,4 +98,26 @@ section {
 .price--card {
   padding: 6rem 3rem;
   border-radius: 50px;
+}
+
+.contact {
+  margin-bottom: 5rem;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact form :where(input, textarea) {
+  padding-inline: 0;
+  padding-inline: 1rem;
+  border-radius: 5px;
+  padding-block: 10px;
+  outline-color: var(--clr-sec);
+  color: hsl(var(--clr-dark));
+  font-size: var(--fs-400);
+  font-weight: var(--font-medium);
+}
+.contact form button {
+  width: fit-content;
 }

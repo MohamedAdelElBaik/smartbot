@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="header--main flex">
-        <h1 class="fs-700 font-black">SmartBot</h1>
+        <h1 class="fs-700 font-black text-sec">SmartBot</h1>
         <nav>
           <ul class="nav-menu flex fs-500">
             <a href="#about">
@@ -92,7 +92,7 @@
               <li>Lorem ipsum dolor sit amet.</li>
               <li>Lorem ipsum dolor sit amet.</li>
             </ul>
-            <button>Get Unlimited</button>
+            <button class="bg-sec">Get Unlimited</button>
           </div>
           <div class="price--card box-gradient-dark">
             <h2 class="fs-600">Enterprise</h2>
@@ -112,7 +112,53 @@
           </div>
         </div>
       </section>
-      <section>hello</section>
+      <section
+        id="contact"
+        class="contact box-gradient-dark flex justify-between"
+      >
+        <div>
+          <h1 class="fs-700">Get in touch</h1>
+          <span class="fs-800">
+            <bold class="text-sec">Convey Your</bold><br />
+            Ideas to Us
+          </span>
+          <p class="fs-600">
+            Lorem ipsum dolor sit amet consecte tursit amet consectetur
+            adipisicing elit. Quos?
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+          </ul>
+        </div>
+        <form>
+          <span class="flex flex-column">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Example Example" />
+          </span>
+          <div class="flex">
+            <span class="flex flex-column">
+              <label for="email">Email</label>
+              <input type="email" placeholder="example@gmail.com" />
+            </span>
+            <span class="flex flex-column">
+              <label for="phone">Phone</label>
+              <input type="tel" placeholder="+2010000000000" />
+            </span>
+          </div>
+          <span class="flex flex-column">
+            <label for="message">Message</label>
+            <textarea
+              rows="7"
+              name="message"
+              id="message"
+              placeholder="Your message"
+            ></textarea>
+          </span>
+          <button class="btn-sec font-black fs-400 uppercase">Send</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>
