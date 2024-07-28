@@ -19,7 +19,7 @@
   --fs-800: 6.25rem;
   --fs-700: 2.35rem;
   --fs-600: 2rem;
-  --fs-500: 1.75rem;
+  --fs-500: 1.5rem;
   --fs-400: 1.125rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -278,4 +278,23 @@ button {
 
 .box-gradient-dark {
   background: var(--box-gradient-dark);
+}
+
+button {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: white;
+  border: 1px solid transparent;
+  outline: none;
+  transition: transform 0.25s linear, border-color 0.25s linear;
+}
+button:hover {
+  transform: scale(1.1);
+  border-color: #b3aaff;
+}
+
+input {
+  padding: 5px 25px;
+  border: none;
 }
