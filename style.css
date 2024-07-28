@@ -233,3 +233,32 @@ footer input {
   border-color: hsl(var(--clr-dark));
   border-radius: 20px;
 }
+
+@media (max-width: 1300px) {
+  footer .links {
+    gap: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer--content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer--content input {
+    height: fit-content;
+  }
+  footer .links {
+    gap: 1rem;
+    justify-content: space-between;
+    padding-inline: 10%;
+  }
+}
+/* @media (max-width: 768px) {
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 400px) {
+} */
