@@ -39,8 +39,14 @@ form .login {
   width: fit-content;
   padding: 7px 40px;
   margin-top: 10px;
+  border-radius: 15px;
+  color: hsl(var(--clr-dark));
+  font-weight: 600;
+  transition: transform 0.25s linear;
 }
-
+form .login:hover {
+  transform: scale(1.1);
+}
 .login-container .another {
   margin-top: 30px;
   display: flex;
