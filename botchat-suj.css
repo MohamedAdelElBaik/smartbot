@@ -61,4 +61,22 @@ main .logo img {
     gap: 1rem;
     align-self: end;
   }
+  .buttons-group > * {
+    margin-inline: 0.2rem;
+  }
+}
+@media (max-width: 400px) {
+  .smart_bot-logo::before {
+    content: "";
+    margin-left: 0;
+  }
+  .buttons-group :last-child {
+    display: none;
+  }
+  main .logo {
+    display: none;
+  }
+  main {
+    grid-template-rows: 1fr auto;
+  }
 }
