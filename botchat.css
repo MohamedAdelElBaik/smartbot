@@ -43,7 +43,7 @@ header .foot:hover {
   background-color: #b3aaff23;
   transform: scale(1.05);
 }
-.test {
+.open_menu {
   display: none;
 }
 
@@ -126,21 +126,23 @@ main .send button:hover {
     top: 0;
     left: 0;
     bottom: 0;
+    min-height: 100vh;
+    height: fit-content;
     transition: all 0.25s linear;
     width: 500px;
     padding-inline: 35px 50px;
   }
-  header:has(.test:checked) {
+  header:has(.open_menu:checked) {
     left: -450px;
   }
-  .test {
+  .open_menu {
     display: block;
     position: fixed;
     top: 0px;
     left: 10px;
     visibility: hidden;
   }
-  .test::after {
+  .open_menu::after {
     cursor: pointer;
     content: url("images/close-menu-logo.svg");
     width: 50px;
@@ -149,7 +151,7 @@ main .send button:hover {
     color: black;
     visibility: visible;
   }
-  .test:checked:after {
+  .open_menu:checked:after {
     cursor: pointer;
     content: url("images/open-menu-logo.svg");
     width: 50px;
@@ -167,7 +169,7 @@ main .send button:hover {
   header {
     width: 400px;
   }
-  header:has(.test:checked) {
+  header:has(.open_menu:checked) {
     left: -350px;
   }
 }
@@ -175,7 +177,7 @@ main .send button:hover {
   header {
     width: 300px;
   }
-  header:has(.test:checked) {
+  header:has(.open_menu:checked) {
     left: -250px;
   }
 }
@@ -183,7 +185,7 @@ main .send button:hover {
   header {
     width: 100%;
   }
-  header:has(.test:checked) {
+  header:has(.open_menu:checked) {
     left: -500px;
   }
   main {
@@ -192,6 +194,9 @@ main .send button:hover {
   }
   main .header h1 {
     visibility: hidden;
+  }
+  .open_menu {
+    top: -25px;
   }
   .chat--response div {
     display: none;
