@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="signup.css" />
     <link href="images/bot-icon.svg" rel="icon" type="image/x-icon" />
   </head>
-  <body class="box-gradient-dark">
+  <body class="box-gradient-dark light-mode">
     <main>
-      <div class="sing-container">
+      <div class="sign-container">
         <h1 class="fs-700 text-sec">Sign Up</h1>
         <form action="">
           <span>
@@ -45,7 +45,7 @@
             />
           </span>
           <a href="index.html">
-            <div class="sing bg-sec">Sign Up</div>
+            <div class="sign bg-sec">Sign Up</div>
           </a>
         </form>
         <div class="another">
@@ -56,5 +56,14 @@
         </div>
       </div>
     </main>
+
+    <button class="btn-dark-light-mode" onclick="toggleLightMode()">M</button>
+
+    <script>
+      function toggleLightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
   </body>
 </html>
