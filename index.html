@@ -14,11 +14,12 @@
   </head>
   <body>
     <header>
-      <div class="flex justify-between">
+      <div class="container flex justify-between">
         <div>
           <h1 class="fs-700 font-black text-sec">SmartBot</h1>
         </div>
         <div class="main-nav flex">
+          <input type="checkbox" class="main-nav-check" checked />
           <nav>
             <ul class="nav-menu flex fs-500">
               <a href="#about">
@@ -32,8 +33,8 @@
               </a>
             </ul>
           </nav>
-          <div class="flex">
-            <input type="text" placeholder="search..." />
+          <div class="quick flex">
+            <input class="search" type="text" placeholder="search..." />
             <a href="botchat.html">
               <button class="bg-dark box-gradient-dark text-white">
                 Quick chat
