@@ -236,16 +236,7 @@ section {
   width: fit-content;
 }
 
-@media (max-width: 1300px) {
-  main,
-  footer {
-    /* margin-inline: 5%; */
-  }
-}
 @media (max-width: 1024px) {
-  section {
-    /* padding: 7% 3%; */
-  }
   .about {
     grid-template-columns: 1fr;
   }

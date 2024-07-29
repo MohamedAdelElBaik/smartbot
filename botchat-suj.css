@@ -79,4 +79,7 @@ main .logo img {
   main {
     grid-template-rows: 1fr auto;
   }
+  .mob-del {
+    display: none;
+  }
 }
