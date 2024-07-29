@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="login.css" />
     <link href="images/bot-icon.svg" rel="icon" type="image/x-icon" />
   </head>
-  <body class="box-gradient-dark">
+  <body class="box-gradient-dark light-mode">
     <main>
       <div class="login-container">
         <h1 class="fs-700 text-sec">Login</h1>
@@ -44,5 +44,14 @@
         </div>
       </div>
     </main>
+
+    <button class="btn-dark-light-mode" onclick="toggleLightMode()">M</button>
+
+    <script>
+      function toggleLightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
   </body>
 </html>
