@@ -432,6 +432,10 @@ a {
 .btn-main:hover {
   background-color: rgb(196, 194, 194);
 }
+.light-mode .btn-main {
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+}
 
 .btn-sec {
   background-color: transparent;
@@ -440,6 +444,9 @@ a {
 }
 .btn-sec:hover {
   background-color: rgba(115, 46, 218, 0.226);
+}
+.light-mode .btn-sec {
+  color: hsl(var(--clr-dark));
 }
 
 .btn-sec-old {
@@ -463,6 +470,7 @@ a {
   align-items: center;
   padding: 0.35rem 1rem;
   gap: 1rem;
+  border: 1px solid transparent;
 }
 
 .btn-send label {
@@ -472,6 +480,9 @@ a {
 }
 .btn-send input {
   width: 100%;
+}
+.light-mode .btn-send {
+  border-color: var(--clr-sec);
 }
 
 .smart_bot-logo {
@@ -483,4 +494,22 @@ a {
 .smart_bot-logo::before {
   content: url("/images/bot-icon.svg");
   margin: 0.5em;
+}
+
+.light-mode .smart_bot-logo {
+  color: hsl(var(--clr-dark));
+}
+
+.btn-dark-light-mode {
+  position: fixed;
+  border-radius: 100%;
+  font-size: var(--fs-600);
+  font-weight: 700;
+  padding: 1px 9px;
+  bottom: 20px;
+  right: 20px;
+}
+.light-mode .btn-dark-light-mode {
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
 }
