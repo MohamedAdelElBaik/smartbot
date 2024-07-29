@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  background: var(--box-gradient-dark);
+}
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.322);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.buttons-group > * {
+  margin-inline: 0.5rem;
+}
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+main .logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+main .logo img {
+  width: 100%;
+  object-fit: contain;
+}
+.suggestions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-self: end;
+}
+
+.suggestions .sug--box {
+  background: hsl(var(--clr-dark), 0.3);
+  padding: 1rem;
+  border-radius: 1rem;
+  /* border: 1px solid var(--clr-sec); */
+}
+.suggestions .sug--box h2 {
+  margin-bottom: 5px;
+  font-size: var(--fs-500);
+  font-weight: 700;
+  color: rgb(165, 158, 158);
+}
