@@ -122,7 +122,8 @@ main .send button:hover {
   }
   header {
     position: absolute;
-    background-color: #1b0c38e1;
+    background-color: #1b0c38ee;
+    /* backdrop-filter: blur(2px); */
     top: 0;
     left: 0;
     bottom: 0;
@@ -148,7 +149,6 @@ main .send button:hover {
     width: 50px;
     height: 50px;
     font-size: 50px;
-    color: black;
     visibility: visible;
   }
   .open_menu:checked:after {
@@ -157,7 +157,6 @@ main .send button:hover {
     width: 50px;
     height: 50px;
     font-size: 50px;
-    color: black;
     visibility: visible;
   }
 
@@ -197,6 +196,11 @@ main .send button:hover {
   }
   .open_menu {
     top: -25px;
+  }
+  main .header .avatar {
+    position: absolute;
+    top: 11px;
+    right: 10px;
   }
   .chat--response div {
     display: none;
