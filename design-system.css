@@ -387,12 +387,6 @@ a {
   color: inherit;
 }
 
-.btn-sec {
-  background-color: var(--clr-sec);
-  color: hsl(var(--clr-dark));
-  border-color: #8882c4;
-}
-
 .ul-no-style {
   list-style: none;
   margin: 0;
@@ -414,4 +408,79 @@ a {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: var(--fs-400);
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  transition: transform 0.25s linear, background-color 0.25s linear,
+    color 0.25s linear;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-main {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+}
+.btn-main:hover {
+  background-color: rgb(196, 194, 194);
+}
+
+.btn-sec {
+  background-color: transparent;
+  color: hsl(var(--clr-white));
+  border-color: rgb(196, 194, 194);
+}
+.btn-sec:hover {
+  background-color: rgba(115, 46, 218, 0.226);
+}
+
+.btn-sec-old {
+  background-color: var(--clr-sec);
+  color: hsl(var(--clr-dark));
+  border-color: #8882c4;
+}
+
+.btn-send {
+  display: inline-block;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  font-size: var(--fs-400);
+  padding: 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  gap: 1rem;
+}
+
+.btn-send label {
+  cursor: pointer;
+  width: fit-content;
+  font-size: var(--fs-500);
+}
+.btn-send input {
+  width: 100%;
+}
+
+.smart_bot-logo {
+  font-size: var(--fs-700);
+  font-weight: 800;
+  color: var(--clr-sec);
+  position: relative;
+}
+.smart_bot-logo::before {
+  content: url("/images/bot-icon.svg");
+  margin: 0.5em;
 }
