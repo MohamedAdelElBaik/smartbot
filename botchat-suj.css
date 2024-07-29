@@ -53,3 +53,12 @@ main .logo img {
   font-weight: 700;
   color: rgb(165, 158, 158);
 }
+
+@media (max-width: 640px) {
+  .suggestions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-self: end;
+  }
+}
