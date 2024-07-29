@@ -43,6 +43,9 @@ header .foot:hover {
   background-color: #b3aaff23;
   transform: scale(1.05);
 }
+.test {
+  display: none;
+}
 
 main {
   padding: 2rem;
@@ -109,3 +112,69 @@ main .send button:hover {
   background-position: center;
   background-size: contain;
 }
+
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  main {
+    margin-left: 50px;
+  }
+  header {
+    position: absolute;
+    background-color: #1b0c38e1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.25s linear;
+    width: 500px;
+    padding-inline: 35px 50px;
+  }
+  header:has(.test:checked) {
+    left: -450px;
+  }
+  .test {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    visibility: hidden;
+  }
+  .test::after {
+    cursor: pointer;
+    content: url("images/close-menu-logo.svg");
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: black;
+    visibility: visible;
+  }
+  .test:checked:after {
+    cursor: pointer;
+    content: url("images/open-menu-logo.svg");
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: black;
+    visibility: visible;
+  }
+
+  header .head {
+    padding-left: 30px;
+  }
+}
+/* @media (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: pink;
+  }
+} */
