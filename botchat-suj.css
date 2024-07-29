@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  min-height: 100lvh;
   display: grid;
   padding: 2rem;
   gap: 2rem;
