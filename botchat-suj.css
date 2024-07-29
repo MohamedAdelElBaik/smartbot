@@ -6,6 +6,10 @@ body {
   gap: 2rem;
   background: var(--box-gradient-dark);
 }
+body.light-mode {
+  background: white;
+}
+
 body::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.322);
@@ -15,6 +19,9 @@ body::after {
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+body.light-mode::after {
+  background: rgba(93, 20, 189, 0.068);
 }
 .buttons-group > * {
   margin-inline: 0.5rem;
@@ -43,16 +50,25 @@ main .logo img {
 }
 
 .suggestions .sug--box {
+  cursor: pointer;
   background: hsl(var(--clr-dark), 0.3);
   padding: 1rem;
   border-radius: 1rem;
   /* border: 1px solid var(--clr-sec); */
 }
+.light-mode .suggestions .sug--box {
+  background: hsl(var(--clr-dark), 0.1);
+  background-color: var(--clr-sec);
+}
+
 .suggestions .sug--box h2 {
   margin-bottom: 5px;
   font-size: var(--fs-500);
   font-weight: 700;
   color: rgb(165, 158, 158);
+}
+.light-mode .suggestions .sug--box h2 {
+  color: hsl(var(--clr-dark));
 }
 
 @media (max-width: 640px) {

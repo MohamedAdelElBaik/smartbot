@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="botchat-suj.css" />
     <link href="images/bot-icon.svg" rel="icon" type="image/x-icon" />
   </head>
-  <body>
+  <body class="light-mode">
     <header class="flex justify-between">
       <h1 class="smart_bot-logo">SmartBot</h1>
       <div class="buttons-group">
@@ -61,5 +61,13 @@
         </span>
       </div>
     </main>
+    <button class="btn-dark-light-mode" onclick="myFunction()">M</button>
+
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
   </body>
 </html>
