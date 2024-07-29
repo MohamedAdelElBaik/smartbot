@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="botchat.css" />
     <link  href="images/bot-icon.svg" rel="icon" type="image/x-icon" >
   </head>
-  <body>
+  <body class="light-mode">
     <header>
       <input class="open_menu" type="checkbox" checked >
       <div class="head flex justify-between">
@@ -62,7 +62,7 @@
     </header>
     <main>
       <div class="header flex justify-between mb-1">
-        <h1 class="fs-700 font-bold text-sec">SmartBot</h1>
+        <h1 class="smart_bot-logo">SmartBot</h1>
         <div class="avatar"><span>M</span></div>
       </div>
       <div class="chat flex flex-column">
@@ -122,5 +122,13 @@
         <button class="bg-sec">Send</button>
       </div>
     </main>
+    <button class="btn-dark-light-mode" onclick="toggleLightMode()">M</button>
+
+    <script>
+      function toggleLightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
   </body>
 </html>

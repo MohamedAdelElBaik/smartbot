@@ -2,12 +2,20 @@ body {
   display: grid;
   grid-template-columns: 300px 1fr;
 }
+body.light-mode {
+  background: var(--box-gradient-light);
+}
+
 header {
   padding: 2rem 1rem;
   background-color: #0000003a;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
+}
+.light-mode header {
+  background-color: var(--clr-sec);
+  border-right: 1px solid hsl(var(--clr-dark));
 }
 
 .chat_history h2 {
@@ -90,6 +98,11 @@ main .send button:hover {
   transform: scale(1);
 }
 
+.light-mode main .send button {
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
+}
+
 .chat {
   gap: 2rem;
 }
@@ -103,11 +116,20 @@ main .send button:hover {
 .chat--response {
   gap: 2rem;
 }
+.light-mode .chat--response {
+  color: hsl(var(--clr-dark));
+}
 .chat--response div {
   width: 100px;
   height: 75px;
   padding: 3px;
   background: url("/images/bot-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.light-mode .chat--response div {
+  background: url("/images/bot-icon-dark.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -132,6 +154,7 @@ main .send button:hover {
     transition: all 0.25s linear;
     width: 500px;
     padding-inline: 35px 50px;
+    z-index: 2;
   }
   header:has(.open_menu:checked) {
     left: -450px;

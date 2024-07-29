@@ -61,10 +61,11 @@
         </span>
       </div>
     </main>
-    <button class="btn-dark-light-mode" onclick="myFunction()">M</button>
+
+    <button class="btn-dark-light-mode" onclick="toggleLightMode()">M</button>
 
     <script>
-      function myFunction() {
+      function toggleLightMode() {
         var element = document.body;
         element.classList.toggle("light-mode");
       }

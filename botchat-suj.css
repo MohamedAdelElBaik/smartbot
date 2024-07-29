@@ -7,11 +7,7 @@ body {
   background: var(--box-gradient-dark);
 }
 body.light-mode {
-  background: linear-gradient(
-    45deg,
-    rgba(179, 170, 255, 1) 20%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: var(--box-gradient-light);
 }
 
 body::after {
@@ -58,7 +54,6 @@ main .logo img {
   background: hsl(var(--clr-dark), 0.3);
   padding: 1rem;
   border-radius: 1rem;
-  /* border: 1px solid var(--clr-sec); */
 }
 .light-mode .suggestions .sug--box {
   background-color: var(--clr-sec);
