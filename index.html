@@ -12,11 +12,11 @@
     />
     <link href="images/bot-icon.svg" rel="icon" type="image/x-icon" />
   </head>
-  <body>
+  <body class="light-mode">
     <header>
       <div class="container flex justify-between">
         <div>
-          <h1 class="fs-700 font-black text-sec">SmartBot</h1>
+          <h1 class="smart_bot-logo font-dark">SmartBot</h1>
         </div>
         <div class="main-nav flex">
           <input type="checkbox" class="main-nav-check" checked />
@@ -101,7 +101,7 @@
               <li>Lorem ipsum dolor sit amet.</li>
             </ul>
             <div class="price--btn">
-              <button class="bg-sec">Get Unlimited</button>
+              <button class="bg-sec btn-dark">Get Unlimited</button>
             </div>
           </div>
           <div class="price--card box-gradient-dark">
@@ -168,7 +168,9 @@
               placeholder="Your message"
             ></textarea>
           </span>
-          <button class="btn-sec-old font-black fs-400 uppercase">Send</button>
+          <button class="btn-dark btn-sec-old font-black fs-400 uppercase">
+            Send
+          </button>
         </form>
       </section>
     </main>
@@ -212,5 +214,14 @@
         </div>
       </div>
     </footer>
+
+    <button class="btn-dark-light-mode" onclick="toggleLightMode()">M</button>
+
+    <script>
+      function toggleLightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+      }
+    </script>
   </body>
 </html>
