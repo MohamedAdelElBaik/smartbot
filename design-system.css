@@ -20,6 +20,9 @@
     rgba(255, 255, 255, 1) 100%
   );
 
+  /* Box Shadow */
+  --box-shadow: rgba(0, 0, 0, 0.6) 5px 8px 20px;
+
   /* Font Sizes */
   --fs-900: 9.375rem;
   --fs-800: 5.5rem;

@@ -14,9 +14,6 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.light-mode .main-nav {
-  background-color: var(--clr-sec);
-}
 
 .main-nav input {
   border-radius: 20px;
@@ -60,6 +57,10 @@ header {
     margin-inline: 4rem;
     width: 380px;
   }
+  .light-mode .main-nav {
+    background-color: var(--clr-sec);
+  }
+
   .main-nav-check {
     display: block;
     position: fixed;
@@ -147,27 +148,24 @@ header {
 
 main,
 footer {
-  /* margin-inline: 10%; */
   max-width: 1400px;
   margin: auto;
 }
 
 main {
-  /* min-height: 80vh; */
   display: grid;
-  /* grid-template-rows: repeat(3, 80vh); */
-  gap: 5rem;
+  margin-top: 7rem;
+  gap: 6em;
 }
 
 section {
-  /* height: 90vh; */
   display: block;
   padding: 10% 5%;
   align-self: center;
   justify-self: center;
   align-items: center;
   border-radius: 40px;
-  /* width: 100%; */
+  box-shadow: var(--box-shadow);
 }
 .light-mode section {
   background: #0000000e;
@@ -208,12 +206,19 @@ section {
   background-color: rgba(36, 22, 65, 0.144);
 }
 
+.price {
+  padding: 5%;
+}
 .price h1 {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .price ul {
   list-style: none;
   padding: 0;
+}
+.light-mode .price {
+  box-shadow: none;
+  background: transparent;
 }
 
 .price ul li:before {
@@ -228,15 +233,16 @@ section {
 .price--card {
   padding: 6rem 3rem;
   border-radius: 50px;
+  box-shadow: var(--box-shadow);
 }
 .light-mode .price--card {
   background: var(--box-gradient-light);
   color: hsl(var(--clr-dark));
 }
 
-.contact {
+/* .contact {
   margin-bottom: 5rem;
-}
+} */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -265,6 +271,9 @@ section {
 }
 
 @media (max-width: 1024px) {
+  main {
+    margin-top: 3rem;
+  }
   .about {
     grid-template-columns: 1fr;
   }
@@ -283,8 +292,12 @@ section {
   body {
     margin-inline: 2rem;
   }
+  main {
+    margin-top: 2rem;
+  }
+
   .price--card {
-    padding: 2rem 1rem;
+    padding: 2rem;
     border-radius: 30px;
   }
   .price--btn button {
@@ -297,7 +310,7 @@ section {
     margin-inline: 1rem;
   }
   .price--card {
-    padding: 1rem 0.75rem;
+    /* padding: 2rem; */
     border-radius: 20px;
   }
   .contact .header {
@@ -329,9 +342,9 @@ section {
 }
 
 footer {
-  margin-top: 3rem;
+  margin-top: 10rem;
   padding: 3rem 2rem;
-  border-radius: 100px 100px 0 0;
+  border-radius: 40px 40px 0 0;
 }
 footer input {
   border: 1px solid hsl(var(--clr-dark));
@@ -366,6 +379,9 @@ footer input {
 @media (max-width: 640px) {
   .footer--content {
     flex-direction: column;
+  }
+  footer {
+    margin-top: 5rem;
   }
   footer .links {
     flex-direction: column;
