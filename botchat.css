@@ -163,18 +163,41 @@ main .send button:hover {
     padding-left: 30px;
   }
 }
-/* @media (max-width: 768px) {
-  body {
-    background-color: green;
+@media (max-width: 768px) {
+  header {
+    width: 400px;
+  }
+  header:has(.test:checked) {
+    left: -350px;
   }
 }
 @media (max-width: 640px) {
-  body {
-    background-color: yellow;
+  header {
+    width: 300px;
+  }
+  header:has(.test:checked) {
+    left: -250px;
   }
 }
 @media (max-width: 400px) {
-  body {
-    background-color: pink;
+  header {
+    width: 100%;
   }
-} */
+  header:has(.test:checked) {
+    left: -500px;
+  }
+  main {
+    margin-left: 0;
+    padding: 0.7rem;
+  }
+  main .header h1 {
+    visibility: hidden;
+  }
+  .chat--response div {
+    display: none;
+  }
+  .chat--message {
+    padding: 3px 10px;
+    width: fit-content;
+  }
+}
