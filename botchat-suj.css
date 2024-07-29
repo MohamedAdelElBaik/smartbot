@@ -7,7 +7,11 @@ body {
   background: var(--box-gradient-dark);
 }
 body.light-mode {
-  background: white;
+  background: linear-gradient(
+    45deg,
+    rgba(179, 170, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 body::after {
@@ -21,7 +25,7 @@ body::after {
   z-index: -1;
 }
 body.light-mode::after {
-  background: rgba(93, 20, 189, 0.068);
+  background: transparent;
 }
 .buttons-group > * {
   margin-inline: 0.5rem;
@@ -57,8 +61,8 @@ main .logo img {
   /* border: 1px solid var(--clr-sec); */
 }
 .light-mode .suggestions .sug--box {
-  background: hsl(var(--clr-dark), 0.1);
   background-color: var(--clr-sec);
+  background: hsl(var(--clr-dark), 0.05);
 }
 
 .suggestions .sug--box h2 {
