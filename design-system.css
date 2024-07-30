@@ -83,9 +83,6 @@
     --fs-700: 1.75rem;
     --fs-600: 1.25rem;
     --fs-500: 1.125rem;
-    --fs-400: 0.95rem;
-    --fs-300: 0.75rem;
-    --fs-200: 0.65rem;
   }
 }
 @media (max-width: 640px) {
@@ -511,15 +508,25 @@ a {
 }
 
 .btn-dark-light-mode {
+  background-color: hsl(var(--clr-white));
+  background-image: url("/images/sun-icon.svg");
+  width: 40px;
+  height: 40px;
   position: fixed;
   border-radius: 100%;
   font-size: var(--fs-600);
   font-weight: 700;
   padding: 1px 9px;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .light-mode .btn-dark-light-mode {
   background-color: hsl(var(--clr-dark));
+  background-image: url("/images/moon-icon.svg");
   color: hsl(var(--clr-white));
+  background-position: center;
+  background-repeat: no-repeat;
+  /* object-fit: contain; */
 }
