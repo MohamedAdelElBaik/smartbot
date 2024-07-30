@@ -299,6 +299,9 @@ main .send button:hover {
     padding: 0.3rem;
   }
 
+  .chat {
+    padding-inline: 1.5rem;
+  }
   .open_menu {
     top: -15px;
   }

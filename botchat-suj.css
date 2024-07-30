@@ -10,19 +10,14 @@ body.light-mode {
   background: var(--box-gradient-light);
 }
 
-body::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.322);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+header {
+  align-items: center;
+  justify-content: space-between;
 }
-body.light-mode::after {
-  background: transparent;
+header:first-child {
+  height: fit-content;
 }
+
 .buttons-group > * {
   margin-inline: 0.5rem;
 }
