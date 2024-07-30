@@ -1,6 +1,7 @@
-body {
-  margin-inline: 3rem;
+body > * {
+  padding-inline: 3rem;
 }
+
 body.light-mode {
   background: linear-gradient(
     75deg,
@@ -26,7 +27,8 @@ body.light-mode {
 }
 
 header {
-  margin: 2rem 0.5rem;
+  padding-block: 0.5rem;
+  box-shadow: var(--box-shadow);
 }
 
 .main-nav {
@@ -59,14 +61,10 @@ header {
 }
 
 @media (max-width: 1300px) {
-  header {
-    margin: 1.5rem 0.35rem;
-  }
   .quick {
     width: 100%;
   }
   .quick :where(input, button, a) {
-    /* background-color: var(--clr-sec); */
     width: 100%;
   }
   .quick .search {
@@ -77,30 +75,36 @@ header {
     width: 380px;
   }
   .light-mode .main-nav {
-    background-color: var(--clr-sec);
+    background-color: hsl(var(--clr-white) / 0.95);
+  }
+  .light-mode .quick .search {
+    border: 2px solid var(--clr-sec);
   }
 
   .main-nav-check {
-    display: block;
+    display: inline-block;
     position: fixed;
-    top: 25px;
-    right: 450px;
+    top: 2.7%;
+    right: 5%;
+    z-index: 100;
     visibility: hidden;
     transition: right 0.25s linear;
-  }
-  .main-nav-check:checked {
-    right: 50px;
+    border: 2px solid yellow;
   }
   .main-nav-check::after {
+    display: inline-block;
     cursor: pointer;
-    content: url("images/close-menu-logo.svg");
-    width: 50px;
-    height: 50px;
+    content: "";
+    width: 30px;
+    height: 30px;
     visibility: visible;
+    background-color: hsl(var(--clr-dark), 0.3);
+    background-position: center;
+    background-size: contain;
+    background-image: url("images/close-menu-logo.svg");
   }
   .main-nav-check:checked:after {
-    cursor: pointer;
-    content: url("images/open-menu-logo.svg");
+    background-image: url("images/open-menu-logo.svg");
   }
 
   .main-nav:has(.main-nav-check:checked) {
@@ -131,7 +135,21 @@ header {
     font-weight: 600;
   }
 }
-
+@media (max-width: 1024px) {
+  .main-nav-check::after {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav-check::after {
+    width: 25px;
+    height: 25px;
+  }
+  .main-nav-check {
+    top: 2.5%;
+  }
+}
 @media (max-width: 640px) {
   .main-nav {
     width: 360px;
@@ -141,11 +159,14 @@ header {
     width: 300px;
   }
   .main-nav-check {
-    top: 22px;
-    right: 320px;
+    top: 2.4%;
   }
-  .main-nav-check:checked {
+  /* .main-nav-check:checked {
     right: 35px;
+  } */
+  .main-nav-check::after {
+    width: 22px;
+    height: 22px;
   }
 }
 @media (max-width: 400px) {
@@ -155,6 +176,7 @@ header {
   .quick .search {
     margin-inline: 0.5rem;
     width: fit-content;
+    width: 95%;
   }
   .main-nav-check {
     top: 22px;
@@ -312,8 +334,8 @@ section {
   }
 }
 @media (max-width: 768px) {
-  body {
-    margin-inline: 2rem;
+  body > * {
+    padding-inline: 1rem;
   }
   main {
     margin-top: 2rem;
@@ -329,8 +351,8 @@ section {
   }
 }
 @media (max-width: 640px) {
-  body {
-    margin-inline: 1rem;
+  body > * {
+    padding-inline: 1rem;
   }
   .price--card {
     /* padding: 2rem; */
@@ -355,7 +377,10 @@ section {
     width: 100%;
   }
   .form--email-phone {
-    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form--email-phone > * {
+    width: 100%;
   }
 }
 @media (max-width: 400px) {
@@ -397,8 +422,7 @@ footer input {
     padding-inline: 10%;
   }
 }
-/* @media (max-width: 768px) {
-} */
+
 @media (max-width: 640px) {
   .footer--content {
     flex-direction: column;
@@ -422,27 +446,27 @@ footer input {
 }
 
 /* @media (max-width: 1300px) {
-  body {
-    background-color: blue;
+  main {
+    background: blue;
   }
 }
 @media (max-width: 1024px) {
-  body {
-    background-color: red;
+  main {
+    background: red;
   }
 }
 @media (max-width: 768px) {
-  body {
-    background-color: green;
+  main {
+    background: green;
   }
 }
 @media (max-width: 640px) {
-  body {
-    background-color: yellow;
+  main {
+    background: yellow;
   }
 }
 @media (max-width: 400px) {
-  body {
-    background-color: pink;
+  main {
+    background: pink;
   }
 } */

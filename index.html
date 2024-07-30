@@ -14,9 +14,10 @@
   </head>
   <body>
     <header>
-      <div class="container flex justify-between">
-        <div>
-          <h1 class="smart_bot-logo font-dark">SmartBot</h1>
+      <div class="flex justify-between">
+        <div class="smart_bot-logo-n">
+          <span></span>
+          <h1>SmartBot</h1>
         </div>
         <div class="main-nav flex">
           <input type="checkbox" class="main-nav-check" checked />
@@ -145,24 +146,24 @@
           </ul>
         </div>
         <form>
-          <span class="flex flex-column">
+          <span class="form_field">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Example Example" />
           </span>
           <div class="flex form--email-phone">
-            <span class="flex flex-column">
+            <span class="form_field">
               <label for="email">Email</label>
               <input type="email" placeholder="example@gmail.com" />
             </span>
-            <span class="flex flex-column">
+            <span class="form_field">
               <label for="phone">Phone</label>
               <input type="tel" placeholder="+2010000000000" />
             </span>
           </div>
-          <span class="flex flex-column">
+          <span class="form_field">
             <label for="message">Message</label>
             <textarea
-              rows="7"
+              rows="5"
               name="message"
               id="message"
               placeholder="Your message"

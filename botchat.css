@@ -1,9 +1,9 @@
 body {
   display: grid;
   grid-template-columns: 300px 1fr;
-  max-height: 100vh;
+  /* max-height: 100vh;
   max-height: 100lvh;
-  overflow: hidden;
+  overflow: hidden; */
 }
 body.light-mode {
   background: var(--box-gradient-light);
@@ -107,14 +107,20 @@ main {
   /* overflow: scroll; */
   gap: 2rem;
   background: var(--box-gradient-dark);
+  max-height: 100vh;
+  max-height: 100lvh;
 }
 .light-mode main {
   background: var(--box-gradient-light);
 }
 
+main .header {
+  align-items: center;
+}
+
 main .header .avatar {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
   background-color: orangered;
   display: flex;

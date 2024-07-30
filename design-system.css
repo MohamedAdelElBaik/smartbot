@@ -539,3 +539,87 @@ a {
 .hidden-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.smart_bot-logo-n {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.smart_bot-logo-n span {
+  background-image: url("/images/bot-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 54px;
+  height: 54px;
+  background-size: cover;
+}
+.smart_bot-logo-n h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--clr-sec);
+}
+
+.light-mode .smart_bot-logo-n span {
+  background-image: url("/images/bot-icon-dark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 54px;
+  height: 54px;
+  background-size: cover;
+}
+.light-mode .smart_bot-logo-n h1 {
+  font-size: 2.8rem;
+  color: hsl(var(--clr-dark));
+  font-weight: 700;
+}
+
+@media (max-width: 1300px) {
+  .smart_bot-logo-n,
+  .light-mode .smart_bot-logo-n {
+    gap: 0.2rem;
+  }
+  .smart_bot-logo-n span,
+  .light-mode .smart_bot-logo-n span {
+    width: 50px;
+    height: 50px;
+  }
+  .smart_bot-logo-n h1,
+  .light-mode .smart_bot-logo-n h1 {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .smart_bot-logo-n,
+  .light-mode .smart_bot-logo-n {
+    gap: 0.1rem;
+  }
+  .smart_bot-logo-n span,
+  .light-mode .smart_bot-logo-n span {
+    width: 35px;
+    height: 35px;
+  }
+  .smart_bot-logo-n h1,
+  .light-mode .smart_bot-logo-n h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+}
+
+.form_field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .form_field {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .form_field {
+    gap: 0.3rem;
+  }
+}
