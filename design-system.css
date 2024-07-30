@@ -531,6 +531,11 @@ a {
   /* object-fit: contain; */
 }
 
+@media (max-width: 400px) {
+  .btn-dark-light-mode {
+    bottom: 90px;
+  }
+}
 .hidden-scrollbar {
   overflow: scroll;
   scrollbar-width: none;

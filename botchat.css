@@ -1,9 +1,6 @@
 body {
   display: grid;
   grid-template-columns: 300px 1fr;
-  /* max-height: 100vh;
-  max-height: 100lvh;
-  overflow: hidden; */
 }
 body.light-mode {
   background: var(--box-gradient-light);
@@ -15,6 +12,7 @@ header {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
+  max-height: 100lvh;
 }
 
 .light-mode header {
@@ -56,11 +54,9 @@ header .head span {
   cursor: pointer;
   padding: 5px;
   transition: all 0.15s linear;
-  /* font-size: var(--fs-400); */
 }
 .chat_history ul li:hover {
   background-color: #b3aaff59;
-  /* color: hsl(var(--clr-dark)); */
   border-radius: 10px;
 }
 .chat_history--title {
@@ -101,14 +97,14 @@ header .foot:hover {
 }
 
 main {
-  padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* overflow: scroll; */
-  gap: 2rem;
   background: var(--box-gradient-dark);
   max-height: 100vh;
   max-height: 100lvh;
+}
+main > * {
+  padding: 0.7rem;
 }
 .light-mode main {
   background: var(--box-gradient-light);
@@ -116,6 +112,13 @@ main {
 
 main .header {
   align-items: center;
+  background: var(--box-gradient-dark);
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  z-index: 1000;
+}
+.light-mode main .header {
+  background: var(--clr-sec);
 }
 
 main .header .avatar {
@@ -127,6 +130,7 @@ main .header .avatar {
   justify-content: center;
   align-items: center;
 }
+
 main .header .avatar span {
   font-size: 18px;
 }
@@ -139,6 +143,8 @@ main .chat {
 main .send {
   gap: 0;
   transition: transform 0.25s linear;
+  padding-bottom: 2rem;
+  height: 80px;
 }
 main .send input {
   border-radius: 15px 0 0 15px;
@@ -148,6 +154,7 @@ main .send input {
 main .send button {
   border-radius: 0 15px 15px 0;
   border: 1px;
+  padding-inline: 3rem;
 }
 main .send button:hover {
   transform: scale(1);
@@ -209,7 +216,8 @@ main .send button:hover {
   }
   header {
     position: absolute;
-    background-color: #1b0c38ee;
+    background-color: rgba(27, 12, 56, 0.952);
+
     /* backdrop-filter: blur(2px); */
     top: 0;
     left: 0;
@@ -220,6 +228,7 @@ main .send button:hover {
     width: 350px;
     padding-inline: 35px 20px;
     z-index: 2;
+    z-index: 999999;
   }
   header:has(.open_menu:checked) {
     padding-inline: 35px 50px;
@@ -241,6 +250,7 @@ main .send button:hover {
     visibility: visible;
   }
   .open_menu:checked:after {
+    z-index: 999999;
     cursor: pointer;
     content: url("images/open-menu-logo.svg");
     width: 50px;
@@ -257,20 +267,16 @@ main .send button:hover {
     font-size: 1rem;
   }
 }
-@media (max-width: 768px) {
-  /* header {
-    width: 400px;
-  }
-  header:has(.open_menu:checked) {
-    left: -350px;
-  } */
-}
+
 @media (max-width: 640px) {
   header {
     width: 300px;
   }
   header:has(.open_menu:checked) {
     left: -250px;
+  }
+  .open_menu {
+    top: -10px;
   }
 }
 @media (max-width: 400px) {
@@ -282,25 +288,25 @@ main .send button:hover {
   }
   main {
     margin-left: 0;
-    padding: 0.7rem;
   }
-  main .header h1 {
-    visibility: hidden;
+  main > * {
+    padding: 0.3rem;
   }
+
   .open_menu {
-    top: -25px;
+    top: -15px;
   }
-  main .header .avatar {
-    position: absolute;
-    top: 11px;
-    right: 10px;
-  }
+
   .chat--response div {
     display: none;
   }
   .chat--message {
     padding: 3px 10px;
     width: fit-content;
+  }
+
+  .smart_bot-logo-n.bot_chat {
+    padding-left: 3rem;
   }
 }
 
