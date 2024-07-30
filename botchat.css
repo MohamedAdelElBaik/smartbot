@@ -13,11 +13,16 @@ header {
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
 }
+
 .light-mode header {
   background-color: var(--clr-sec);
   border-right: 1px solid hsl(var(--clr-dark));
 }
 
+header .head span {
+  font-size: 2rem;
+  font-weight: 700;
+}
 .light-mode header .head span {
   color: hsl(var(--clr-dark));
 }
@@ -37,6 +42,7 @@ header {
 
 .chat_history h2 {
   margin-bottom: 1rem;
+  font-size: 2rem;
 }
 .chat_history ul {
   display: flex;
@@ -47,7 +53,7 @@ header {
   cursor: pointer;
   padding: 5px;
   transition: all 0.15s linear;
-  font-size: var(--fs-400);
+  /* font-size: var(--fs-400); */
 }
 .chat_history ul li:hover {
   background-color: #b3aaff59;
@@ -59,6 +65,12 @@ header {
   flex-direction: column;
   gap: 2rem;
   height: 70vh;
+}
+.chat_history--title h3 {
+  font-size: 1rem;
+}
+.chat_history--title ul li {
+  font-size: 1.2rem;
 }
 
 .hidden-scrollbar {
@@ -196,12 +208,13 @@ main .send button:hover {
     min-height: 100vh;
     height: fit-content;
     transition: all 0.25s linear;
-    width: 500px;
-    padding-inline: 35px 50px;
+    width: 350px;
+    padding-inline: 35px 20px;
     z-index: 2;
   }
   header:has(.open_menu:checked) {
-    left: -450px;
+    padding-inline: 35px 50px;
+    left: -300px;
   }
   .open_menu {
     display: block;
@@ -232,12 +245,12 @@ main .send button:hover {
   }
 }
 @media (max-width: 768px) {
-  header {
+  /* header {
     width: 400px;
   }
   header:has(.open_menu:checked) {
     left: -350px;
-  }
+  } */
 }
 @media (max-width: 640px) {
   header {
@@ -277,3 +290,29 @@ main .send button:hover {
     width: fit-content;
   }
 }
+
+/* @media (max-width: 1300px) {
+  header {
+    background: blue;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    background: red;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background: green;
+  }
+}
+@media (max-width: 640px) {
+  header {
+    background: yellow;
+  }
+}
+@media (max-width: 400px) {
+  header {
+    background: pink;
+  }
+} */
