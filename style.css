@@ -2,7 +2,26 @@ body {
   margin-inline: 3rem;
 }
 body.light-mode {
-  background: var(--box-gradient-light);
+  background: linear-gradient(
+    75deg,
+    hsl(262deg 96% 80%) 0%,
+    hsl(265deg 94% 82%) 13%,
+    hsl(267deg 91% 85%) 24%,
+    hsl(269deg 87% 88%) 34%,
+    hsl(272deg 82% 91%) 41%,
+    hsl(272deg 78% 88%) 47%,
+    hsl(273deg 75% 86%) 52%,
+    hsl(273deg 73% 83%) 56%,
+    hsl(274deg 71% 80%) 60%,
+    hsl(274deg 73% 82%) 63%,
+    hsl(274deg 75% 85%) 67%,
+    hsl(274deg 78% 87%) 70%,
+    hsl(274deg 81% 89%) 74%,
+    hsl(274deg 85% 88%) 79%,
+    hsl(274deg 88% 86%) 85%,
+    hsl(274deg 90% 84%) 92%,
+    hsl(274deg 91% 82%) 100%
+  );
   color: hsl(var(--clr-dark));
 }
 
@@ -168,7 +187,7 @@ section {
   box-shadow: var(--box-shadow);
 }
 .light-mode section {
-  background: #0000000e;
+  background: white;
 }
 
 .about {
@@ -236,20 +255,16 @@ section {
   box-shadow: var(--box-shadow);
 }
 .light-mode .price--card {
-  background: var(--box-gradient-light);
+  background: white;
   color: hsl(var(--clr-dark));
 }
 
-/* .contact {
-  margin-bottom: 5rem;
-} */
 .contact form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 .contact form :where(input, textarea) {
-  padding-inline: 0;
   padding-inline: 1rem;
   padding-block: 10px;
   border-radius: 5px;
@@ -258,11 +273,19 @@ section {
   font-size: var(--fs-400);
   font-weight: var(--font-medium);
 }
+.light-mode .contact form :where(input, textarea) {
+  border: 2px solid var(--clr-sec);
+  outline-color: hsl(var(--clr-dark));
+}
+
 .contact form button {
   width: fit-content;
 }
 .contact .text-sec {
   color: white;
+}
+.light-mode .contact .text-sec {
+  color: var(--clr-sec);
 }
 
 .light-mode .btn-dark {
