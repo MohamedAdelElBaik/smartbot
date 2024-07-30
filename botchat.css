@@ -11,7 +11,8 @@ header {
   background-color: #0000003a;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 2rem;
+  /* gap: 2rem; */
+  max-height: 100vh;
   max-height: 100lvh;
 }
 
@@ -41,6 +42,9 @@ header .head span {
   background-position: center;
 }
 
+.chat {
+  padding-inline: 1rem;
+}
 .chat_history h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -137,7 +141,7 @@ main .header .avatar span {
 
 main .chat {
   align-self: self-end;
-  max-height: 80vh;
+  max-height: 79vh;
 }
 
 main .send {
@@ -271,6 +275,7 @@ main .send button:hover {
 @media (max-width: 640px) {
   header {
     width: 300px;
+    padding: 0.9rem 1rem;
   }
   header:has(.open_menu:checked) {
     left: -250px;
@@ -282,6 +287,7 @@ main .send button:hover {
 @media (max-width: 400px) {
   header {
     width: 100%;
+    padding: 0.3rem 1rem;
   }
   header:has(.open_menu:checked) {
     left: -500px;
