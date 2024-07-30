@@ -530,3 +530,12 @@ a {
   background-repeat: no-repeat;
   /* object-fit: contain; */
 }
+
+.hidden-scrollbar {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}

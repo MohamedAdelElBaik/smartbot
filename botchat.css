@@ -1,6 +1,9 @@
 body {
   display: grid;
   grid-template-columns: 300px 1fr;
+  max-height: 100vh;
+  max-height: 100lvh;
+  overflow: hidden;
 }
 body.light-mode {
   background: var(--box-gradient-light);
@@ -73,15 +76,6 @@ header .head span {
   font-size: 1.2rem;
 }
 
-.hidden-scrollbar {
-  overflow: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.hidden-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 .light-mode .chat_history :where(h2, h3) {
   color: hsl(var(--clr-dark));
 }
@@ -110,6 +104,7 @@ main {
   padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  /* overflow: scroll; */
   gap: 2rem;
   background: var(--box-gradient-dark);
 }
@@ -132,6 +127,7 @@ main .header .avatar span {
 
 main .chat {
   align-self: self-end;
+  max-height: 80vh;
 }
 
 main .send {
@@ -167,10 +163,12 @@ main .send button:hover {
   border: 1px solid var(--clr-sec);
   background: var(--clr-sec);
   box-shadow: var(--box-shadow);
-  max-width: 50%;
+  max-width: 55%;
+  font-size: 1rem;
 }
-.chat--response {
+.chat--response p {
   gap: 2rem;
+  font-size: 1.1rem;
 }
 .light-mode .chat--response {
   color: hsl(var(--clr-dark));
@@ -191,6 +189,11 @@ main .send button:hover {
   background-size: contain;
 }
 
+@media (max-width: 1300px) {
+  .chat--message {
+    max-width: 65%;
+  }
+}
 @media (max-width: 1024px) {
   body {
     grid-template-columns: 1fr;
@@ -243,6 +246,10 @@ main .send button:hover {
   header .head {
     padding-left: 30px;
   }
+  .chat--message {
+    max-width: 75%;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 768px) {
   /* header {
@@ -292,27 +299,27 @@ main .send button:hover {
 }
 
 /* @media (max-width: 1300px) {
-  header {
+  main {
     background: blue;
   }
 }
 @media (max-width: 1024px) {
-  header {
+  main {
     background: red;
   }
 }
 @media (max-width: 768px) {
-  header {
+  main {
     background: green;
   }
 }
 @media (max-width: 640px) {
-  header {
+  main {
     background: yellow;
   }
 }
 @media (max-width: 400px) {
-  header {
+  main {
     background: pink;
   }
 } */

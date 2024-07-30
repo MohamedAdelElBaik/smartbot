@@ -6,20 +6,20 @@
     <title>SmartChat</title>
     <link rel="stylesheet" href="design-system.css" />
     <link rel="stylesheet" href="botchat.css" />
-    <link  href="images/bot-icon.svg" rel="icon" type="image/x-icon" >
+    <link href="images/bot-icon.svg" rel="icon" type="image/x-icon" />
   </head>
-  <body >
+  <body>
     <header>
-      <input class="open_menu" type="checkbox" checked >
+      <input class="open_menu" type="checkbox" checked />
       <div class="head flex justify-between">
-        <div class="pointer head-setting" ></div>
+        <div class="pointer head-setting"></div>
         <span class="text-sec">Free plan</span>
       </div>
       <div class="chat_history">
         <h2 class="font-semibold">Chat History</h2>
         <div class="chat_history--title hidden-scrollbar">
           <div>
-            <h3 class="text-sec">yesterday</h3>
+            <h3 class="text-sec">Yesterday</h3>
             <ul class="ul-no-style">
               <li>Lorem ipsum dolor sit amet conszsa.</li>
               <li>Lorem ipsum dolor sit amet conszsa.</li>
@@ -57,18 +57,33 @@
       </div>
       <div class="foot pointer">
         <p>Upgrade Plan</p>
-        <span>get all unlocked features of our tool</span>
+        <span>Get all unlocked features of our tool</span>
       </div>
     </header>
-    <main>
+    <main class="hiddean-scrollbar">
       <div class="header flex justify-between mb-1">
         <h1 class="smart_bot-logo">SmartBot</h1>
         <div class="avatar"><span>M</span></div>
       </div>
-      <div class="chat flex flex-column">
+      <div class="chat flex flex-column hidden-scrollbar">
         <div class="chat--message box-gradient-dark">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
-          laboriosam.
+          laboriosam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Esse, laboriosam.
+        </div>
+        <div class="chat--response flex">
+          <div></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
+            libero debitis quia enim quasi sunt unde repellendus doloremque
+            quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Placeat a libero debitis quia enim quasi sunt unde repellendus
+            doloremque quaerat. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Placeat a libero debitis quia enim quasi sunt unde
+            repellendus doloremque quaerat.
+          </p>
+        </div>
+        <div class="chat--message box-gradient-dark">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
           laboriosam.
         </div>
@@ -84,28 +99,9 @@
             repellendus doloremque quaerat.
           </p>
         </div>
-      <div class="chat flex flex-column">
         <div class="chat--message box-gradient-dark">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
-          laboriosam.
-        </div>
-        <div class="chat--response flex">
-          <div></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
-            libero debitis quia enim quasi sunt unde repellendus doloremque
-            quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Placeat a libero debitis quia enim quasi sunt unde repellendus
-            doloremque quaerat. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Placeat a libero debitis quia enim quasi sunt unde
-            repellendus doloremque quaerat.
-          </p>
-        </div>
-      <div class="chat flex flex-column">
-        <div class="chat--message box-gradient-dark">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
-          laboriosam.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          laboriosam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </div>
         <div class="chat--response flex">
           <div></div>
@@ -121,7 +117,7 @@
         </div>
       </div>
       <div class="send flex">
-        <input type="text" placeholder="/yourComand" />
+        <input type="text" placeholder="/yourCommand" />
         <button class="bg-sec">Send</button>
       </div>
     </main>
